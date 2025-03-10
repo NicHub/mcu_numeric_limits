@@ -23,8 +23,8 @@ void printSplashScreen()
 void setupSerial()
 {
     Serial.begin(BAUD_RATE);
-    Serial.flush();
     delay(2000);
     Serial.print("\n\n\n");
+    Serial.flush();
     printSplashScreen();
 }
