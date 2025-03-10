@@ -11,9 +11,6 @@
 #include <main.h>
 #include <mcu_numeric_limits.h>
 
-/**
- *
- */
 void setup()
 {
     setupSerial();
@@ -21,9 +18,6 @@ void setup()
     min_max_values_float();
 }
 
-/**
- *
- */
 void loop()
 {
     yield();

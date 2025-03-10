@@ -196,6 +196,16 @@ void min_max_values_integers_defined_in_stdint_h()
     Serial.print("UINT32_MAX + 1 =  ");
     Serial.println((uint32_t)(UINT32_MAX + 1));
 
+    Serial.print("\n");
+    Serial.print("UNSIGNED_LONG_MIN     =  ");
+    Serial.println((unsigned long)(0));
+    Serial.print("UNSIGNED_LONG_MIN - 1 =  ");
+    Serial.println((unsigned long)((unsigned long)(0) - (unsigned long)(1)));
+    Serial.print("UNSIGNED_LONG_MAX     =  ");
+    Serial.println((unsigned long)(UINT32_MAX));
+    Serial.print("UNSIGNED_LONG_MAX + 1 =  ");
+    Serial.println((unsigned long)(UINT32_MAX + 1));
+
 #if !defined(__AVR__)
     // On AVR, Serial cannot print 64 bit values.
     // We’ll use dedicated functions below.
@@ -323,7 +333,9 @@ void min_max_values_integers()
 #elif defined ESP32
     Serial.println("# MIN AND MAX VALUES FOR ESP32 ARCHITECTURE");
 #elif defined ESP8266
-    Serial.println("# MIN AND MAX VALUES FOR ESP8266 ARCHITECTURE");
+Serial.println("# MIN AND MAX VALUES FOR ESP8266 ARCHITECTURE");
+#else
+Serial.println("# NO KNOWN ARCHITECTURE FOUND");
 #endif
 
     min_max_values_integers_defined_in_stdint_h();
